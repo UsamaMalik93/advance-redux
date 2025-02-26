@@ -4,10 +4,8 @@ import Header from "./components/shared/Header";
 import NavBar from "./components/shared/NavBar";
 
 export default function Home() {
-  return (
-    <>
-      <NavBar />
-      <Header />
+  const Cards = () => {
+    return (
       <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-1 m-5 gap-3">
         <Cart />
         <Cart />
@@ -17,6 +15,13 @@ export default function Home() {
         <Cart />
         <Cart />
       </div>
+    );
+  };
+  return (
+    <>
+      <NavBar />
+      <Header />
+      <Cards />
     </>
   );
 }
